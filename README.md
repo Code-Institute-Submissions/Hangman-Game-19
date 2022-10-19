@@ -1,31 +1,53 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
+#
 
-Welcome Yari-Carelli,
+### About Hangman
+Hangman is a guessing game in which the objective of the player is to find out the hidden word. Every incorrect guess leads to the decrement of the chances left for the player.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The chances left are represented in the form of a hanging man. And the job of every hero is to save lives.
 
-## Reminders
+### Designing Hangman
+Before we move on to the section of creating the game logic, we first need to figure out how the game will look for any player. There are two particular design components in this game:
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+🠖 The Hangman – We need to provide a visual aid to the player in the context of the hanging man.
+🠖 Word Display – At the start of the game, the word must be displayed as blanks, instead of letters.
 
-## Creating the Heroku app
+### Hangman Design
+As we know, after every incorrect move, a new part of the hanging man’s body is displayed. To implement this, we store the body parts in a list.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+<img src="assets/images/screenshot1.png" width="400">
 
-1. `heroku/python`
-2. `heroku/nodejs`
+The function that handles these hangman values is presented below:
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+<img src="assets/images/screenshot2.png" width="400">
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The image below displays all the hangman states possible in the game. Each incorrect mistake adds a body part until the body is complete and the player loses.
 
-Connect your GitHub repository and deploy as normal.
+<img src="assets/images/screenshot3.png" width="400">
 
-## Constraints
+The state displayed in the image below represents the hangman escaping the gallows after the player guesses the complete word.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<img src="assets/images/screenshot4.png" width="400">
 
------
-Happy coding!
+The function below, 'print_hangman_win()' takes care of printing the escaped hangman when the player wins.
+
+<img src="assets/images/screenshot5.png" width="400">
+
+### Word display
+At the start of the game, only the blanks must be visible. After each player input, we must manipulate what needs to be displayed.
+
+<img src="assets/images/screenshot6.png" width="400">
+
+Initially, the list 'word_display' contains underscores for every alphabet in the hidden word. The following function is used to display this list.
+
+<img src="assets/images/screenshot7.png" width="400">
+
+### Data-set for words
+In this part of creating the game, we can let our imagination run wild. There can be multiple ways to access the list words like importing from a .csv file, extracting from a database, etc.
+To keep this project simple, I have hard-coded some categories and words.
+
+<img src="assets/images/screenshot8.png" width="400">
+
+Let us understand the data-structures used here:
+🠖 'topics'– This Python dictionary provides, each category with a numeric value. This will further be used to implement a category-based menu.
+🠖 'dataset' – This Python dictionary contains a list of words in each category. After the player chooses a category, we are supposed to pick words from here itself.
