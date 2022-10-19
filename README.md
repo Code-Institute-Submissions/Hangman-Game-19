@@ -34,6 +34,10 @@ The function below, 'print_hangman_win()' takes care of printing the escaped han
 <img src="assets/images/screenshot5.png" width="400">
 
 ### Word display
+The 'clear()' function is responsible for clearing the terminal. It makes use of inbuilt 'os' library of Python.
+
+<img src="assets/images/screenshot0.png" width="400">
+
 At the start of the game, only the blanks must be visible. After each player input, we must manipulate what needs to be displayed.
 
 <img src="assets/images/screenshot6.png" width="400">
@@ -51,3 +55,72 @@ To keep this project simple, I have hard-coded some categories and words.
 Let us understand the data-structures used here:
 🠖 'topics'– This Python dictionary provides, each category with a numeric value. This will further be used to implement a category-based menu.
 🠖 'dataset' – This Python dictionary contains a list of words in each category. After the player chooses a category, we are supposed to pick words from here itself.
+
+### Game Loop
+Every game which depends upon a series of moves from the player requires a game loop. This loop is responsible for managing the player input, displaying game design, and other essential parts of game-logic.
+
+<img src="assets/images/screenshot9.png" width="400">
+
+Inside this game loop, we will take care of the following things:
+
+- Game Menu
+The game menu is responsible for providing the notion of game-control to the player. The player decides the category on the basis of his/her interests.
+
+<img src="assets/images/screenshot10.png" width="400">
+
+It is advisable to always provide an option of quitting the game, whenever a game menu is created.
+
+- Handling the player’s category choice
+A game developer no matter what level of skill, must always handle player input with great attention. The game must not crash on some erroneous player input.
+
+<img src="assets/images/screenshot11.png" width="400">
+
+After doing some sanity checks, we are ready to pick the word for the game-play.
+
+### Pick the game-play word
+We use the inbuilt Python library, 'random' for picking a random word from the specific category list.
+
+<img src="assets/images/screenshot13.png" width="400">
+
+After picking the word, comes the game-logic section.
+
+### Game-Logic for Hangman
+The function 'hangman()' contains the entire game functioning. It includes storing incorrect guesses, reducing the number of chances left, and printing the specific state of hangman.
+
+<img src="assets/images/screenshot14.png" width="400">
+
+The above code snippet contains all the elementary data structures and variables required for smooth functioning of our hangman game.
+
+### Initialize necessary components
+One of the most important aspects of creating a game is the initial state of the game components.
+
+<img src="assets/images/screenshot15.png" width="400">
+
+We are required to initialize the structure of word display as it will vary for every other word for the game. For our convenience, we initialize the container for storing the correct letters, in the same loop.
+
+Note: This version of the hangman game only supports the guessing of the alphabets. If the reader wants to add the functionality of guessing other elements like numbers or special characters, the changes have to be made here.
+
+### Inner game loop
+This inner game loop is responsible for controlling the flow of single gameplay of the hangman game. It includes showing proper display, handling character input, updating the necessary data structures, and other key aspects of the game.
+
+<img src="assets/images/screenshot16.png" width="400">
+
+### Player’s move input
+This part of our game deals with the player’s interaction with our game. The input must be checking for few scenarios before implementing it in the game logic:
+
+🠖 Valid length – Since we are accepting a single character, we need to check in case the player mischievously enters multiple characters.
+🠖 An alphabet? – As told before, our version of the hangman game only supports guessing of alphabets.
+🠖 Already tried – Being a considerate programmer, we have to notify if the player enters an incorrect and already tried alphabet.
+
+<img src="assets/images/screenshot17.png" width="400">
+
+### Manage the player’s move
+It is quite obvious that we will come across only two situations while managing the player’s move.
+
+🠖 Incorrect Alphabet – For an incorrect move, we update the list of incorrect letters and the hangman display (adding body-parts).
+
+<img src="assets/images/screenshot18.png" width="400">
+
+🠖 Correct Alphabet – In case, a capable player enters a correct alphabet, we update our word display.
+
+<img src="assets/images/screenshot19.png" width="400">
