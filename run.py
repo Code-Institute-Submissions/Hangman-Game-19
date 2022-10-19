@@ -84,3 +84,74 @@ def hangman_game(word):
             correct_letters.append(char.upper())
         else:
             word_display.append(char)
+    
+    # Game Loop         
+    while True:
+ 
+        # Printing necessary values
+        print_hangman(show_hangman_values)
+        print_word(word_display)            
+        print()
+        print("Incorrect characters : ", incorrect)
+        print()
+ 
+ 
+        # Accepting player input
+        inp = input("Enter a character = ")
+        if len(inp) != 1:
+            clear()
+            print("Wrong choice!! Try Again")
+            continue
+ 
+        # Checking whether it is a alphabet
+        if not inp[0].isalpha():
+            clear()
+            print("Wrong choice!! Try Again")
+            continue
+ 
+        # Checking if it already tried before   
+        if inp.upper() in incorrect:
+            clear()
+            print("Already tried!!")
+            continue   
+ 
+        # Incorrect character input 
+        if inp.upper() not in correct_letters:
+             
+            # Adding in the incorrect list
+            incorrect.append(inp.upper())
+             
+            # Updating the hangman display
+            show_hangman_values[chances] = hangman_values[chances]
+            chances = chances + 1
+             
+            # Checking if the player lost
+            if chances == len(hangman_values):
+                print()
+                clear()
+                print("\tGAME OVER!!!")
+                print_hangman(hangman_values)
+                print("The word is :", word.upper())
+                break
+ 
+        # Correct character input
+        else:
+ 
+            # Updating the word display
+            for i in range(len(word)):
+                if word[i].upper() == inp.upper():
+                    word_display[i] = inp.upper()
+ 
+            # Checking if the player won        
+            if check_win(word_display):
+                clear()
+                print("\tCongratulations! ")
+                print_hangman_win()
+                print("The word is :", word.upper())
+                break
+        clear() 
+     
+ 
+if __name__ == "__main__":
+ 
+    clear()
