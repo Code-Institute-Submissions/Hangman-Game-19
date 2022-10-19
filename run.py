@@ -35,3 +35,12 @@ def print_hangman_win():
     print("  ______/_\\______|_|___")
     print("  `````````````````````")
     print()
+
+
+# Function to print the word to be guessed
+def print_word(values):
+    print()
+    print("\t", end="")
+    for x in values:
+        print(x, end="")
+    print() 
