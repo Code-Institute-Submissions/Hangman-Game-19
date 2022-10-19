@@ -21,3 +21,17 @@ def print_hangman(values):
     print("  `````````````````````")
     print()
  
+
+# Function to print the hangman after winning
+def print_hangman_win():
+    print()
+    print("\t +--------+")
+    print("\t         | |")
+ 
+    print("\t         | |")
+    print("\t O       | |")
+    print("\t/|\\      | |")
+    print("\t |       | |")
+    print("  ______/_\\______|_|___")
+    print("  `````````````````````")
+    print()
