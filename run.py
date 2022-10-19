@@ -165,3 +165,46 @@ if __name__ == "__main__":
                  "Marvel characters":["CAPTAIN AMERICA", "IRON MAN", "THANOS", "HAWKEYE", "BLACK PANTHER", "BLACK WIDOW"],
                  "Anime characters":["MONKEY D. LUFFY", "RORONOA ZORO", "LIGHT YAGAMI", "MIDORIYA IZUKU"]
                  }
+
+    
+    # The GAME LOOP
+    while True:
+ 
+        # Printing the game menu
+        print()
+        print("-----------------------------------------")
+        print("\t\tGAME MENU")
+        print("-----------------------------------------")
+        for key in topics:
+            print("Press", key, "to select", topics[key])
+        print("Press", len(topics)+1, "to quit")    
+        print()
+         
+        # Handling the player category choice
+        try:
+            choice = int(input("Enter your choice = "))
+        except ValueError:
+            clear()
+            print("Wrong choice!!! Try again")
+            continue
+ 
+        # Sanity checks for input
+        if choice > len(topics)+1:
+            clear()
+            print("No such topic!!! Try again.")
+            continue   
+ 
+        # The EXIT choice   
+        elif choice == len(topics)+1:
+            print()
+            print("Thank you for playing!")
+            break
+ 
+        # The topic chosen
+        chosen_topic = topics[choice]
+ 
+        # The word randomly selected
+        ran = random.choice(dataset[chosen_topic])
+ 
+        # The overall game function
+        hangman_game(ran)
