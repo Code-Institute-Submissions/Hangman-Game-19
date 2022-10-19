@@ -43,4 +43,18 @@ def print_word(values):
     print("\t", end="")
     for x in values:
         print(x, end="")
-    print() 
+    print()
+
+
+# Function to check for win
+def check_win(values):
+    for char in values:
+        if char == '_':
+            return False
+    return True
+
+
+# Function for each hangman game
+def hangman_game(word):
+ 
+    clear()
