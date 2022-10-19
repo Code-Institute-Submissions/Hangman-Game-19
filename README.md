@@ -1,6 +1,14 @@
 # **Hangman**
 #
 
+<img src="assets/images/mockup.png" width="600">
+
+#
+
+[Live Preview](https://hangman-yc.herokuapp.com/)
+
+#
+
 ## Overview
 
 ### **About Hangman**
@@ -206,12 +214,15 @@ As a workaround, I have added a PEP8 validator to my Gitpod Workspace directly b
 - Select pycodestyle from the list.
 - PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
 
-## **Bugs**
+## ** Fixed Bugs**
 
-The image below shows the existing bugs in the program in its current state, and the lines they refer to.
-These errors have been deliberately ignored as they don't affect code functionality.
+The image below shows the errors which resulted in the PROBLEMS section, and the lines they refer to.
 
 <img src="assets/images/screenshot20.png" width="700">
+
+The following image shows the modifications that have been made in the code in order to fix the errors.
+
+<img src="assets/images/screenshot33.png" width="300">
 
 
 ## **Deployment**

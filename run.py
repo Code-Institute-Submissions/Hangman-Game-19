@@ -156,13 +156,56 @@ if __name__ == "__main__":
     clear()
 
     # Types of categories
-    topics = {1: "DC characters", 2: "Marvel characters", 3: "Anime characters"}
+    topics = {
+        1: "DC characters",
+        2: "Marvel characters",
+        3: "Anime characters"
+        }
 
     # Words in each category
-    dataset = {"DC characters": ["SUPERMAN", "JOKER", "HARLEY QUINN", "GREEN LANTERN", "FLASH", "WONDER WOMAN", "AQUAMAN", "MARTIAN MANHUNTER", "BATMAN"],
-               "Marvel characters": ["CAPTAIN AMERICA", "IRON MAN", "THANOS", "HAWKEYE", "BLACK PANTHER", "BLACK WIDOW"],
-               "Anime characters": ["MONKEY D. LUFFY", "RORONOA ZORO", "LIGHT YAGAMI", "MIDORIYA IZUKU"]
-               }
+    dataset = {
+        "DC characters": ["SUPERMAN",
+                          "JOKER",
+                          "HARLEY QUINN",
+                          "GREEN LANTERN",
+                          "FLASH",
+                          "WONDER WOMAN",
+                          "AQUAMAN",
+                          "MARTIAN MANHUNTER",
+                          "BATMAN",
+                          "BLACK ADAM",
+                          "PENGUIN",
+                          "POISON IVY",
+                          "DEATHSTROKE",
+                          "LEX LUTHOR"],
+        "Marvel characters": ["CAPTAIN AMERICA",
+                              "IRON MAN",
+                              "THANOS",
+                              "HAWKEYE",
+                              "BLACK PANTHER",
+                              "BLACK WIDOW",
+                              "SPIDER MAN",
+                              "DOCTOR STRANGE",
+                              "PHOENIX",
+                              "SCARLET WITCH",
+                              "ANT MAN",
+                              "FALCON",
+                              "WOLVERINE",
+                              "HULK",
+                              "DAREDEVIL"],
+        "Anime characters": ["MONKEY D. LUFFY",
+                             "RORONOA ZORO",
+                             "LIGHT YAGAMI",
+                             "MIDORIYA IZUKU",
+                             "GINTOKI",
+                             "NARUTO UZUMAKI",
+                             "SASUKE UCHIHA",
+                             "SAITAMA",
+                             "KEN KANEKI",
+                             "EREN YEAGER",
+                             "EDWARD ELRIC",
+                             "RINTARO OKABE"]
+            }
 
     # The GAME LOOP
     while True:
