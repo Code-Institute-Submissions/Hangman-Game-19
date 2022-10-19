@@ -11,7 +11,7 @@ The chances left are represented in the form of a hanging man. And the job of ev
 ### **Designing Hangman**
 Before we move on to the section of creating the game logic, we first need to figure out how the game will look for any player. There are two particular design components in this game:
 
-🠖 The Hangman – We need to provide a visual aid to the player in the context of the hanging man.
+🠖 The Hangman – We need to provide a visual aid to the player in the context of the hanging man.<br>
 🠖 Word Display – At the start of the game, the word must be displayed as blanks, instead of letters.
 
 ### **Hangman Design**
@@ -73,7 +73,7 @@ The game menu is responsible for providing the notion of game-control to the pla
 It is advisable to always provide an option of quitting the game, whenever a game menu is created.
 
 #### **Handling the player’s category choice**
-A game developer no matter what level of skill, must always handle player input with great attention. The game must not crash on some erroneous player input.
+The game must not crash on some erroneous player input.
 
 <img src="assets/images/screenshot11.png" width="300">
 
@@ -112,7 +112,7 @@ This part of our game deals with the player’s interaction with our game. The i
 
 🠖 Valid length – Since we are accepting a single character, we need to check in case the player mischievously enters multiple characters.<br>
 🠖 An alphabet? – As told before, our version of the hangman game only supports guessing of alphabets.<br>
-🠖 Already tried – Being a considerate programmer, we have to notify if the player enters an incorrect and already tried alphabet.
+🠖 Already tried – We have to notify if the player enters an incorrect and already tried alphabet.
 
 <img src="assets/images/screenshot17.png" width="300">
 
@@ -123,7 +123,7 @@ It is quite obvious that we will come across only two situations while managing 
 
 <img src="assets/images/screenshot18.png" width="300">
 
-🠖 Correct Alphabet: In case, a capable player enters a correct alphabet, we update our word display.
+🠖 Correct Alphabet: In case a player enters a correct alphabet, we update our word display.
 
 <img src="assets/images/screenshot19.png" width="300">
 
@@ -167,9 +167,11 @@ This is a command-line application built purely using `python` as the main progr
 
 ### **Test Cases**
 - The program runs successfully, the user is presented with the game menu and is able to select among the options available:
+
 <img src="assets/images/screenshot21.png" width="300">
 
 - All the states of the visual hanging man display successfully, as well as the word only made of underscores at the start of the game:
+
 <img src="assets/images/screenshot22.png" width="300">
 <img src="assets/images/screenshot27.png" width="300">
 <img src="assets/images/screenshot28.png" width="300">
@@ -179,15 +181,19 @@ This is a command-line application built purely using `python` as the main progr
 <img src="assets/images/screenshot32.png" width="300">
 
 - The letters successfully appear in the word as correct guesses are made:
+
 <img src="assets/images/screenshot23.png" width="300">
 
 - Feature that lets the user know if they have won the game works as expected:
+
 <img src="assets/images/screenshot24.png" width="300">
 
 - The program successfully tells the user if a guess has already been made:
+
 <img src="assets/images/screenshot25.png" width="300">
 
 - Feature that lets the user know if they have lost the game work as expected:
+
 <img src="assets/images/screenshot26.png" width="300">
 
 
