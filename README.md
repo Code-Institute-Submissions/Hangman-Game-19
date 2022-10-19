@@ -139,6 +139,9 @@ It is quite obvious that we will come across only two situations while managing 
 - As a User, I want to be able to see the all the states of the visual hanging man.
 - As a User, I want to be able to see the word displayed as blanks at the start of the game.
 - As a User, I want to be able to see the letters in the word as correct guesses are made.
+- As a User, I want to be able to see the list of incorrect characters that have been guessed.
+- As a User, I want to be able to know if I have won the game.
+- As a User, I want to be able to know if I have lost the game.
 
 
 ## **Technologies Used**
@@ -163,6 +166,30 @@ This is a command-line application built purely using `python` as the main progr
 ## **Testing**
 
 ### **Test Cases**
+- The program runs successfully, the user is presented with the game menu and is able to select among the options available:
+<img src="assets/images/screenshot21.png" width="300">
+
+- All the states of the visual hanging man display successfully, as well as the word only made of underscores at the start of the game:
+<img src="assets/images/screenshot22.png" width="300">
+<img src="assets/images/screenshot27.png" width="300">
+<img src="assets/images/screenshot28.png" width="300">
+<img src="assets/images/screenshot29.png" width="300">
+<img src="assets/images/screenshot30.png" width="300">
+<img src="assets/images/screenshot31.png" width="300">
+<img src="assets/images/screenshot32.png" width="300">
+
+- The letters successfully appear in the word as correct guesses are made:
+<img src="assets/images/screenshot23.png" width="300">
+
+- Feature that lets the user know if they have won the game works as expected:
+<img src="assets/images/screenshot24.png" width="300">
+
+- The program successfully tells the user if a guess has already been made:
+<img src="assets/images/screenshot25.png" width="300">
+
+- Feature that lets the user know if they have lost the game work as expected:
+<img src="assets/images/screenshot26.png" width="300">
+
 
 ### **Validation**
 I have tried to test my code with https://pep8online.com/, but their domain has expired. 
@@ -188,7 +215,7 @@ This application has been deployed to Heroku. The deployment process is describe
 - On your dashboard, click on the **New** button on the top right-hand corner, and then click on **Create new app**.
 - Next, type in your project name, which has to be unique, then choose your region and click on **Create App**.
 - You will come to the next screen, and we will set the **Settings** first and then **Deploy**.
-- In the **Settings**, Scroll down until you reach **Config Vars**, and click on the button **Reveal Config Vars**.
+- In the **Settings**, scroll down until you reach **Config Vars**, and click on the button **Reveal Config Vars**.
 - In the **KEY** section type **PORT** (it MUST be in capital letters) and in the **VALUE** section **8000**.
 - Then you will scroll down and add two buildpacks in the **Settings**, first **Python** and second **Node.js**. Be aware of the order of these two, it has to be exactly like this (Python first and Node.js second), otherwise it will cause problems when we deploy the project.
 - That's all the settings we need to do. Now let's go to the **Deploy** tab. In the deployment method, I connected my Github account, for this project. You must type in the name of your repository in order for it to be connected.
