@@ -155,3 +155,13 @@ def hangman_game(word):
 if __name__ == "__main__":
  
     clear()
+
+
+    # Types of categories
+    topics = {1: "DC characters", 2:"Marvel characters", 3:"Anime characters"}
+ 
+    # Words in each category
+    dataset = {"DC characters":["SUPERMAN", "JOKER", "HARLEY QUINN", "GREEN LANTERN", "FLASH", "WONDER WOMAN", "AQUAMAN", "MARTIAN MANHUNTER", "BATMAN"],\
+                 "Marvel characters":["CAPTAIN AMERICA", "IRON MAN", "THANOS", "HAWKEYE", "BLACK PANTHER", "BLACK WIDOW"],
+                 "Anime characters":["MONKEY D. LUFFY", "RORONOA ZORO", "LIGHT YAGAMI", "MIDORIYA IZUKU"]
+                 }
