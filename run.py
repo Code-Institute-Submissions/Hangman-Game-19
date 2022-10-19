@@ -58,3 +58,29 @@ def check_win(values):
 def hangman_game(word):
  
     clear()
+ 
+    # Stores the letters to be displayed
+    word_display = []
+ 
+    # Stores the correct letters in the word
+    correct_letters = []
+ 
+    # Stores the incorrect guesses made by the player
+    incorrect = []
+ 
+    # Number of chances (incorrect guesses)
+    chances = 0
+ 
+    # Stores the hangman's body values
+    hangman_values = ['O','/','|','\\','|','/','\\']
+ 
+    # Stores the hangman's body values to be shown to the player
+    show_hangman_values = [' ', ' ', ' ', ' ', ' ', ' ', ' ']
+ 
+    # Loop for creating the display word
+    for char in word:
+        if char.isalpha():
+            word_display.append('_')
+            correct_letters.append(char.upper())
+        else:
+            word_display.append(char)
