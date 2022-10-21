@@ -144,10 +144,10 @@ It is quite obvious that we will come across only two situations while managing 
 - As a User, I want to be able to exit the game.
 - As a User, I want to be able to guess a letter.
 - As a User, I want to be able to know if I have already guessed a letter.
-- As a User, I want to be able to see the all the states of the visual hanging man.
+- As a User, I want to be able to see all the states of the visual hanging man.
 - As a User, I want to be able to see the word displayed as blanks at the start of the game.
 - As a User, I want to be able to see the letters in the word as correct guesses are made.
-- As a User, I want to be able to see the list of incorrect characters that have been guessed.
+- As a User, I want to be able to see the list of incorrect letters that have been guessed.
 - As a User, I want to be able to know if I have won the game.
 - As a User, I want to be able to know if I have lost the game.
 
@@ -162,6 +162,7 @@ This is a command-line application built purely using `python` as the main progr
 - [Gitpod](https://gitpod.io/workspaces) for editing code
 - [Heroku](https://heroku.com/) for deployment
 - [Amiresponsive.com](https://ui.dev/amiresponsive) for generating the mock-up
+
 
 ## **Future Features**
 
@@ -214,6 +215,7 @@ As a workaround, I have added a PEP8 validator to my Gitpod Workspace directly b
 - Select pycodestyle from the list.
 - PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
 
+
 ## ** Fixed Bugs**
 
 The image below shows the errors which resulted in the PROBLEMS section, and the lines they refer to.
@@ -261,7 +263,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ## **Acknowledgments**
 
 * Tutor Support from Code Institute, for helping me out when I got stuck.
-* [Stackoverflow](https://stackoverflow.com/), for researching answers to all matter of questions, both large and small. 
+* [Stackoverflow](https://stackoverflow.com/), for providing answers to all matter of questions, both large and small. 
 * My mentor Rohit Sharma, for his immense patience, and for simply being a "python god".
 * My family, who play-tested the application in its various iterations.
 
